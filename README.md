@@ -1,0 +1,2 @@
+# probamunka
+ GB Solutions probafeladat
