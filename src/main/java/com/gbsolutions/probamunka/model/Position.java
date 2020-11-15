@@ -11,31 +11,33 @@ public class Position implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	//@GeneratedValue(strategy = GenerationType.AUTO)
+	private String id;
 	
-	private String position;
+	private String title;
 	
 	private String location;
+	
+	private String url;
 	
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private Client client;
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	public String getPosition() {
-		return position;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setPosition(String position) {
-		this.position = position;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getLocation() {
@@ -54,13 +56,24 @@ public class Position implements Serializable{
 		this.client = client;
 	}
 
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
 	@Override
 	public String toString() {
 		return "Position [id=" + id + 
-				", position=" + position + 
+				", title=" + title + 
 				", location=" + location + 
-				"," + client + "]";
+				", url=" + url + 
+				", client=" + client + "]";
 	}
+
+	
 
 	
 	

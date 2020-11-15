@@ -1,23 +1,27 @@
 package com.gbsolutions.probamunka.dto;
 
+
 public class PositionDTO {
 
-	private String position;
+	private String title;
 
 	private String location;
 	
 	private String clientID;
 	
+	private String url;
+	
+	
 	public PositionDTO() {
 		
 	}
 
-	public String getPosition() {
-		return position;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setPosition(String position) {
-		this.position = position;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getLocation() {
@@ -35,6 +39,12 @@ public class PositionDTO {
 	public void setClientID(String clientID) {
 		this.clientID = clientID;
 	}
-	
-	
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
 }
